@@ -9,8 +9,16 @@ function App() {
  
 
   const addvalue = () => {
-    counter = counter + 1
-    setCounter(counter)
+    // counter = counter + 1
+    // if we write counter like setcounter(counter+1) 4 times then it does not increase value by 4
+    // because react treated it as a baches of funcions like setCOunter
+    // therefore it treated each function as same as previous 
+    
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+
     console.log("clicked" , counter);
 
   }
