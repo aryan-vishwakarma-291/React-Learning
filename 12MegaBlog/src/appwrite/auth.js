@@ -1,6 +1,5 @@
 import conf from "../conf/conf.js";
-
-import { Client, Account , ID } from "appwrite";
+import {Client,Account,ID} from "appwrite";
 
 export class AuthService {
     client = new Client();
@@ -54,6 +53,8 @@ export class AuthService {
             console.log("appwriteLogoutError", error);
         }
     }
+
 }
+
 const authService = new AuthService();
 export default authService;
